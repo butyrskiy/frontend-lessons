@@ -1,4 +1,7 @@
 function calc(operation, a, b) {
+    if (typeof a !== 'number' || typeof b !== 'number') {
+        return 'This parametr is bullshit!';
+    }
     switch(operation) { 
         case '+': 
             return a + b;
@@ -9,10 +12,7 @@ function calc(operation, a, b) {
         default:
             return 'Error';
     }
-}
-calc('+', 5, 3); 
-calc('*', 5, 3); 
-calc('-', 5, 3); 
+} 
 console.log(calc('+', 5, 3)); 
 console.log(calc('*', 5, 3));
 console.log(calc('-', 5, 3));

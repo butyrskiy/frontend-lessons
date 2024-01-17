@@ -1,4 +1,7 @@
 function calc(operation, a, b) {
+    if (typeof a !== 'number' || typeof b !== 'number') {
+        return 'This parametr is bullshit!';
+    }
     if(operation === 'add') {
         return a + b;
     }
@@ -12,10 +15,7 @@ function calc(operation, a, b) {
             return 'Error';
     }
 }
-calc('add', 5, 3); 
-calc('multiply', 5, 3); 
-calc('subtract', 5, 3); 
-calc('Denis give me 5 stars', 5, 3);
+console.log(calc(3));
 console.log(calc('add', 5, 3));
 console.log(calc('multiply', 5, 3));
 console.log(calc('subtract', 5, 3));
