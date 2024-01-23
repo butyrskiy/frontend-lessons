@@ -28,12 +28,10 @@ upperStr: function() {
 }
 };
 
-function toUpperCase() {
-    return this.toUpperCase();
-}
 
 obj.setStr('Danilo');
 console.log(obj.getStr()); 
 console.log(obj.getLengthStr()); 
 console.log(obj.getReverseStr());
-console.log(toUpperCase.call(obj.getStr()));
+
+console.log(obj.getStr().toUpperCase());
