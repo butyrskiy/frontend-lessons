@@ -15,7 +15,7 @@ function addTask(name) {
 }
 
 function changeStatus(name, status) {
-    const task = todo.map(task => task.name === name);
+    const task = todo.find(task => task.name === name);
     if (task) {
         task.status = status;
     } else {
@@ -39,6 +39,5 @@ function showList() {
 }
 addTask("go to the work");
 deleteTask("go to the shop");
-changeStatus("go to the work", STATUS.IN_PROGRESS);
-changeStatus("create task list", STATUS.DONE);
+changeStatus("go to library", STATUS.IN_PROGRESS);
 showList();
